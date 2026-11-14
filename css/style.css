@@ -57,7 +57,7 @@ img{max-width:100%;display:block}
 @media (prefers-reduced-motion:reduce){.years .count{animation:none}}
 .play{position:absolute;inset:0;margin:auto;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:14px}
 @media (min-width:901px){
-  .hero-side{gap:16px;padding-bottom:28px}
+  .hero-side{gap:16px;padding-bottom:72px}
   .hero-side p{font-size:14px;line-height:1.5;max-width:260px}
   .hero-side .btn-light{min-height:38px;padding:0 16px;font-size:12px}
   .years{font-size:38px;font-weight:700}
