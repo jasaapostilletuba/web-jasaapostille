@@ -53,7 +53,8 @@ renderQuote();
 
 const count = document.querySelector('.years .count');
 if (count && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const target = Number(count.dataset.target);
+  const startYear = Number(count.dataset.startYear);
+  const target = Math.max(0, new Date().getFullYear() - startYear);
   const duration = 900;
   const start = performance.now();
   function animateCount(now) {
@@ -63,7 +64,7 @@ if (count && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   }
   requestAnimationFrame(animateCount);
 } else if (count) {
-  count.textContent = count.dataset.target;
+  count.textContent = Math.max(0, new Date().getFullYear() - Number(count.dataset.startYear));
 }
 
 const copyrightYear = document.getElementById('copyrightYear');
