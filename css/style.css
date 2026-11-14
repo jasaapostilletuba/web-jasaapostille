@@ -124,9 +124,9 @@ img{max-width:100%;display:block}
 /* Testimonials */
 .testi{padding:48px 48px 56px;text-align:center}
 .testi h2{margin:6px 0 28px;font-size:clamp(24px,3.2vw,34px);font-weight:400}
-.testi-grid{display:grid;grid-template-columns:1fr 2.2fr;gap:16px;text-align:left}
+.testi-grid{display:grid;grid-template-columns:1fr 2.2fr;gap:16px;text-align:left;align-items:center}
 .vid{position:relative;height:250px}
-.quote{width:100%;max-width:480px;background:var(--soft);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:250px}
+.quote{width:100%;max-width:480px;margin-inline:auto;background:var(--soft);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:250px}
 .quote blockquote{margin:0}
 .quote[hidden]{display:none}
 .quote p{margin:0;font-size:18px;line-height:1.5}
