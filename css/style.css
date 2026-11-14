@@ -126,7 +126,7 @@ img{max-width:100%;display:block}
 .testi h2{margin:6px 0 28px;font-size:clamp(24px,3.2vw,34px);font-weight:400}
 .testi-grid{display:grid;grid-template-columns:1fr 2.2fr;gap:16px;text-align:left}
 .vid{position:relative;height:250px}
-.quote{background:var(--soft);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:250px}
+.quote{width:100%;max-width:480px;background:var(--soft);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:250px}
 .quote blockquote{margin:0}
 .quote[hidden]{display:none}
 .quote p{margin:0;font-size:18px;line-height:1.5}
@@ -183,7 +183,7 @@ footer{background:var(--navy);color:#fff;padding:56px 48px 28px}
   .about{padding-top:56px;padding-bottom:56px}
   .about .curve{display:none}
   .testi-grid{grid-template-columns:1fr 1fr}
-  .quote{grid-column:1/-1}
+  .quote{grid-column:1/-1;max-width:none}
   .foot-grid{grid-template-columns:1fr 1fr}
   .foot-grid>:first-child,.contact{grid-column:1/-1}
 }
