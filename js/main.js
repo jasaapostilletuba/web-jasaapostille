@@ -16,6 +16,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 const names = ["Legalisasi Apostille","Terjemah Resmi","Terjemah Tersumpah","Dokumen Pendidikan","Dokumen Kependudukan","Dokumen Hukum & Bisnis","Layanan Express 24 Jam"];
 const panels = document.querySelectorAll('.svc-panel');
+const detail = document.querySelector('.svc-detail');
 const list = document.getElementById('svcList');
 let svc = 0;
 function renderServices(){
@@ -35,6 +36,11 @@ function renderServices(){
     list.appendChild(b);
   });
   panels.forEach((p, i) => p.hidden = i !== svc);
+  detail.classList.toggle('is-apostille', svc === 0);
+  detail.classList.toggle('is-official-translation', svc === 1);
+  detail.classList.toggle('is-sworn-translation', svc === 2);
+  detail.classList.toggle('is-education-translation', svc === 3);
+  detail.classList.toggle('is-legal-business-translation', svc === 5);
 }
 renderServices();
 

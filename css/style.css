@@ -85,7 +85,12 @@ img{max-width:100%;display:block}
 .svc-list button{min-height:46px;padding:0 14px;border:0;border-radius:10px;background:transparent;color:#fff;font-size:14px;text-align:left;display:flex;justify-content:space-between;align-items:center;transition:background .18s ease,transform .18s ease}
 .svc-list button:hover{background:rgba(255,255,255,.12);transform:translateX(4px)}
 .svc-list button[aria-pressed="true"]{background:var(--blue-dark);font-weight:500}
-.svc-detail{position:relative;min-height:340px;border-radius:var(--radius);background:linear-gradient(135deg,#3d5a8a,#1d2f52);color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:flex-end}
+.svc-detail{position:relative;min-height:340px;border-radius:var(--radius);background:linear-gradient(135deg,#3d5a8a,#1d2f52);color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.svc-detail.is-apostille{background-image:linear-gradient(135deg,rgba(11,27,58,.2),rgba(11,27,58,.82)),url('../assets/layanan-1.jpg');background-position:center;background-size:cover}
+.svc-detail.is-official-translation{background-image:linear-gradient(135deg,rgba(11,27,58,.2),rgba(11,27,58,.82)),url('../assets/layanan-2.jpg');background-position:center;background-size:cover}
+.svc-detail.is-sworn-translation{background-image:linear-gradient(135deg,rgba(11,27,58,.2),rgba(11,27,58,.82)),url('../assets/layanan-3.jpg');background-position:center;background-size:cover}
+.svc-detail.is-education-translation{background-image:linear-gradient(135deg,rgba(11,27,58,.2),rgba(11,27,58,.82)),url('../assets/layanan-4.jpg');background-position:center;background-size:cover}
+.svc-detail.is-legal-business-translation{background-image:linear-gradient(135deg,rgba(11,27,58,.2),rgba(11,27,58,.82)),url('../assets/layanan-5.jpg');background-position:center;background-size:cover}
 .svc-panel h3{margin:0 0 6px;font-size:22px;font-weight:500}
 .svc-panel p{margin:0;font-size:14px;max-width:460px}
 .svc-panel{animation:panel-in .35s ease both}
