@@ -1,3 +1,19 @@
+document.body.classList.add('js-enabled');
+
+const revealItems = document.querySelectorAll('[data-reveal]');
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  revealItems.forEach(item => item.classList.add('is-visible'));
+} else {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+  revealItems.forEach(item => revealObserver.observe(item));
+}
+
 const names = ["Legalisasi Apostille","Terjemah Resmi","Terjemah Tersumpah","Dokumen Pendidikan","Dokumen Kependudukan","Dokumen Hukum & Bisnis","Layanan Express 24 Jam"];
 const panels = document.querySelectorAll('.svc-panel');
 const list = document.getElementById('svcList');
@@ -11,7 +27,11 @@ function renderServices(){
     const l = document.createElement('span'); l.textContent = n;
     const a = document.createElement('span'); a.textContent = i === svc ? '→' : '';
     b.append(l, a);
-    b.onclick = () => { svc = i; renderServices(); };
+    b.addEventListener('click', () => {
+    if (svc === i) return;
+    svc = i;
+    renderServices();
+  });
     list.appendChild(b);
   });
   panels.forEach((p, i) => p.hidden = i !== svc);
@@ -21,8 +41,14 @@ renderServices();
 const quotes = document.querySelectorAll('.quote');
 let t = 0;
 function renderQuote(){ quotes.forEach((q, i) => q.hidden = i !== t); }
-document.getElementById('prev').onclick = () => { t = (t + quotes.length - 1) % quotes.length; renderQuote(); };
-document.getElementById('next').onclick = () => { t = (t + 1) % quotes.length; renderQuote(); };
+document.getElementById('prev').addEventListener('click', () => {
+  t = (t + quotes.length - 1) % quotes.length;
+  renderQuote();
+});
+document.getElementById('next').addEventListener('click', () => {
+  t = (t + 1) % quotes.length;
+  renderQuote();
+});
 renderQuote();
 
 const count = document.querySelector('.years .count');
@@ -51,5 +77,5 @@ function setMenu(open){
   menuBtn.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
   menuBtn.textContent = open ? '✕' : '☰';
 }
-menuBtn.onclick = () => setMenu(!menu.classList.contains('open'));
+menuBtn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
