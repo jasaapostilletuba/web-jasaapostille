@@ -160,7 +160,8 @@ footer{background:var(--navy);color:#fff;padding:56px 48px 28px}
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:20;min-height:48px;padding:0 16px 0 8px;border-radius:24px;background:#128c4a;color:#fff;font-weight:500;font-size:13px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 22px rgba(0,0,0,.22);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
 .wa-float:hover{transform:translateY(-3px);background:#0d743d;box-shadow:0 12px 26px rgba(0,0,0,.28)}
 .wa-float:active{transform:translateY(0) scale(.96)}
-.wa-icon{width:32px;height:32px;border-radius:50%;background:#fff;color:#128c4a;display:grid;place-items:center;font-size:17px;font-weight:600;transition:transform .2s ease}
+.wa-icon{width:32px;height:32px;border-radius:50%;background:#fff;color:#128c4a;display:grid;place-items:center;transition:transform .2s ease}
+.wa-icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
 .wa-float:hover .wa-icon{transform:rotate(-12deg)}
 @media (prefers-reduced-motion:reduce){.hero-person,.svc-panel,.years::after{animation:none}.pill a:hover,.btn:hover,.svc-list button:hover,.steps li:hover,.card:hover,.arrows button:hover,.wa-float:hover{transform:none}}
 
