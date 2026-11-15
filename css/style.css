@@ -28,7 +28,7 @@ img{max-width:100%;display:block}
 
 /* Hero */
 .hero{background:var(--blue);color:#fff;padding:24px 48px 0}
-.nav{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.nav{width:100%;max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
 .logo{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:20px;letter-spacing:.04em}
 .logo img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(1px 0 #fff) drop-shadow(-1px 0 #fff) drop-shadow(0 1px #fff) drop-shadow(0 -1px #fff)}
 .pill{display:flex;flex-wrap:wrap;gap:2px;background:#fff;padding:4px;border-radius:8px}
