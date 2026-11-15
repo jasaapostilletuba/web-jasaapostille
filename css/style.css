@@ -129,7 +129,7 @@ img{max-width:100%;display:block}
 /* Testimonials */
 .testi{max-width:1180px;margin-left:auto;margin-right:auto;padding:48px 48px 56px;text-align:center}
 .testi h2{margin:6px 0 28px;font-size:clamp(24px,3.2vw,34px);font-weight:400}
-.testi-grid{display:grid;grid-template-columns:240px 480px;gap:4px;width:100%;max-width:724px;margin-inline:auto;text-align:left;align-items:center}
+.testi-grid{display:grid;grid-template-columns:minmax(0,480px);gap:4px;width:100%;max-width:480px;margin-inline:auto;text-align:left;align-items:center}
 .vid{position:relative;height:250px}
 .quote{position:relative;width:100%;max-width:480px;margin-inline:0;background:var(--soft);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:250px}
 .quote::after{content:"”";position:absolute;right:20px;bottom:18px;color:#7da7e8;font-family:Georgia,serif;font-size:88px;font-weight:700;line-height:.7;letter-spacing:-16px}
@@ -189,8 +189,8 @@ footer>*{max-width:1180px;margin-left:auto;margin-right:auto}
   .sec-head h2{text-align:left}
   .about{padding-top:56px;padding-bottom:56px}
   .about .curve{display:none}
-  .testi-grid{grid-template-columns:1fr 1fr}
-  .quote{grid-column:1/-1;max-width:none}
+  .testi-grid{grid-template-columns:minmax(0,1fr)}
+  .quote{grid-column:auto;max-width:none}
   .foot-grid{grid-template-columns:1fr 1fr}
   .foot-grid>:first-child,.contact{grid-column:1/-1}
 }
