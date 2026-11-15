@@ -28,7 +28,8 @@ img{max-width:100%;display:block}
 /* Hero */
 .hero{background:var(--blue);color:#fff;padding:24px 48px 0}
 .nav{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-.logo{font-weight:600;font-size:20px;letter-spacing:.04em}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:20px;letter-spacing:.04em}
+.logo img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(1px 0 #fff) drop-shadow(-1px 0 #fff) drop-shadow(0 1px #fff) drop-shadow(0 -1px #fff)}
 .pill{display:flex;flex-wrap:wrap;gap:2px;background:#fff;padding:4px;border-radius:8px}
 .pill a{min-height:44px;padding:6px 10px;border-radius:5px;font-size:11px;color:var(--ink);display:flex;align-items:center;transition:background .18s ease,color .18s ease,transform .18s ease}
 .pill a:hover{transform:translateY(-2px)}
@@ -92,6 +93,7 @@ img{max-width:100%;display:block}
 .svc-detail.is-education-translation{background-image:linear-gradient(135deg,rgba(11,27,58,.2),rgba(11,27,58,.82)),url('../assets/layanan-4.jpg');background-position:center;background-size:cover}
 .svc-detail.is-civil-record-translation{background-image:linear-gradient(135deg,rgba(11,27,58,.2),rgba(11,27,58,.82)),url('../assets/layanan-6.jpg');background-position:center;background-size:cover}
 .svc-detail.is-legal-business-translation{background-image:linear-gradient(135deg,rgba(11,27,58,.2),rgba(11,27,58,.82)),url('../assets/layanan-5.jpg');background-position:center;background-size:cover}
+.svc-detail.is-express-service{background-image:linear-gradient(135deg,rgba(11,27,58,.2),rgba(11,27,58,.82)),url('../assets/layanan-7.jpg');background-position:center;background-size:cover}
 .svc-panel h3{margin:0 0 6px;font-size:22px;font-weight:500}
 .svc-panel p{margin:0;font-size:14px;max-width:460px}
 .svc-panel{animation:panel-in .35s ease both}
@@ -128,7 +130,7 @@ img{max-width:100%;display:block}
 .testi-grid{display:grid;grid-template-columns:240px 480px;gap:4px;width:100%;max-width:724px;margin-inline:auto;text-align:left;align-items:center}
 .vid{position:relative;height:250px}
 .quote{position:relative;width:100%;max-width:480px;margin-inline:0;background:var(--soft);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:250px}
-.quote::after{content:"”";position:absolute;right:24px;bottom:20px;color:#7da7e8;font-family:Georgia,serif;font-size:64px;font-weight:700;line-height:.7;letter-spacing:-12px}
+.quote::after{content:"”";position:absolute;right:20px;bottom:18px;color:#7da7e8;font-family:Georgia,serif;font-size:88px;font-weight:700;line-height:.7;letter-spacing:-16px}
 .quote blockquote{margin:0}
 .quote[hidden]{display:none}
 .quote p{margin:0;font-size:18px;line-height:1.5}

@@ -42,6 +42,7 @@ function renderServices(){
   detail.classList.toggle('is-education-translation', svc === 3);
   detail.classList.toggle('is-civil-record-translation', svc === 4);
   detail.classList.toggle('is-legal-business-translation', svc === 5);
+  detail.classList.toggle('is-express-service', svc === 6);
 }
 renderServices();
 
