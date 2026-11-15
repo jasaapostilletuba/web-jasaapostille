@@ -132,20 +132,33 @@
       .translation-card {
         grid-column: span 2;
         min-height: auto;
-      }
-      .translation-card {
         background: linear-gradient(145deg, #ffffff 0%, #f4f7ff 100%);
       }
       .translation-card > div:first-child > p {
-        margin-bottom: 22px;
+        margin-bottom: 20px;
       }
       .language-grid {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 12px;
+        gap: 10px;
       }
       .language-card {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        min-height: 82px;
+        padding: 10px 6px;
+        border: 1px solid #dfe6f7;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, .92);
+        color: var(--ink);
+        font-size: 11px;
+        line-height: 1.25;
+        text-align: center;
+        font-weight: 500;
+        transition: border-color .18s ease, background .18s ease, transform .18s ease, box-shadow .18s ease;
         animation: language-card-in .45s ease both;
       }
       .language-card:nth-child(1) { animation-delay: .05s; }
@@ -163,33 +176,16 @@
       .language-card:nth-child(13) { animation-delay: .41s; }
       .language-card:nth-child(14) { animation-delay: .44s; }
       .language-card:nth-child(15) { animation-delay: .47s; }
-      @keyframes language-card-in {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: none; }
-      }
       .language-card > span:last-child {
-        min-height: 30px;
+        min-height: 28px;
         display: flex;
         align-items: center;
         justify-content: center;
       }
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        min-height: 86px;
-        padding: 12px 8px;
-        border: 1px solid #dfe6f7;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, .9);
-        color: var(--ink);
-        font-size: 12px;
-        line-height: 1.25;
-        text-align: center;
-        font-weight: 500;
-        transition: border-color .18s ease, background .18s ease, transform .18s ease, box-shadow .18s ease;
-      }
-      .language-card:hover {
+      @keyframes language-card-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: none; }
+      }\n      .language-card:hover {
         border-color: var(--blue);
         background: #fff;
         transform: translateY(-3px);
