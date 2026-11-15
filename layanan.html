@@ -24,13 +24,18 @@
         color: #fff;
         padding: 24px 48px 72px;
       }
-      .services-page-hero .nav { max-width: 1180px; margin: 0 auto; }
+      .services-page-hero .nav {
+        max-width: 1180px;
+        margin: 0 auto;
+      }
       .services-page-intro {
         max-width: 760px;
         margin: 72px auto 0;
         text-align: center;
       }
-      .services-page-intro .label { color: #dbe4ff; }
+      .services-page-intro .label {
+        color: #dbe4ff;
+      }
       .services-page-intro h1 {
         margin: 10px 0 16px;
         font-size: clamp(32px, 5vw, 58px);
@@ -59,21 +64,26 @@
         padding: 28px;
         border-radius: var(--radius);
         background: #fff;
-        box-shadow: 0 14px 34px rgba(11, 27, 58, .1);
+        box-shadow: 0 14px 34px rgba(11, 27, 58, 0.1);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        transition: transform .2s ease, box-shadow .2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
       .service-card:hover {
         transform: translateY(-6px);
-        box-shadow: 0 20px 42px rgba(11, 27, 58, .16);
+        box-shadow: 0 20px 42px rgba(11, 27, 58, 0.16);
       }
       .service-card.featured {
         background: var(--navy);
         color: #fff;
       }
-      .service-card.wide { grid-column: span 2; min-height: 250px; }
+      .service-card.wide {
+        grid-column: span 2;
+        min-height: 250px;
+      }
       .service-number {
         width: 42px;
         height: 42px;
@@ -85,11 +95,66 @@
         font-weight: 600;
         margin-bottom: 28px;
       }
-      .featured .service-number { background: rgba(255,255,255,.14); color: #fff; }
-      .service-card h2 { margin: 0 0 10px; font-size: 23px; font-weight: 500; }
-      .service-card p { margin: 0; color: var(--muted); font-size: 14px; max-width: 560px; }
-      .featured p { color: #dbe4ff; }
-      .service-card .service-link { margin-top: 26px; align-self: flex-start; }
+      .featured .service-number {
+        background: rgba(255, 255, 255, 0.14);
+        color: #fff;
+      }
+      .service-card h2 {
+        margin: 0 0 10px;
+        font-size: 23px;
+        font-weight: 500;
+      }
+      .service-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        max-width: 560px;
+      }
+      .featured p {
+        color: #dbe4ff;
+      }
+      .service-card .service-link {
+        margin-top: 26px;
+        align-self: flex-start;
+      }
+      .translation-card {
+        grid-column: span 2;
+        min-height: auto;
+      }
+      .translation-card > p {
+        margin-bottom: 22px;
+      }
+      .language-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .language-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 56px;
+        padding: 10px 12px;
+        border: 1px solid #dfe6f7;
+        border-radius: 10px;
+        background: #f8faff;
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .language-card:hover {
+        border-color: var(--blue);
+        background: #eef3ff;
+      }
+      .language-flags {
+        flex: none;
+        font-size: 22px;
+        line-height: 1;
+        letter-spacing: -4px;
+      }
+      @media (max-width: 900px) {
+        .language-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
       .services-page-note {
         max-width: 760px;
         margin: 0 auto 72px;
@@ -99,19 +164,46 @@
         color: var(--muted);
         font-size: 14px;
       }
-      .services-page-note strong { color: var(--ink); }
+      .services-page-note strong {
+        color: var(--ink);
+      }
       @media (max-width: 900px) {
-        .services-page-hero { padding-left: 24px; padding-right: 24px; }
-        .service-catalog { padding-left: 24px; padding-right: 24px; }
+        .services-page-hero {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        .service-catalog {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
       }
       @media (max-width: 600px) {
-        .services-page-hero { padding-top: 16px; padding-bottom: 58px; }
-        .services-page-intro { margin-top: 56px; text-align: left; }
-        .services-page-intro p { margin-left: 0; }
-        .service-catalog-grid { grid-template-columns: 1fr; }
-        .service-card.wide { grid-column: auto; }
-        .service-card { min-height: 270px; padding: 22px; }
-        .services-page-note { margin-left: 24px; margin-right: 24px; }
+        .services-page-hero {
+          padding-top: 16px;
+          padding-bottom: 58px;
+        }
+        .services-page-intro {
+          margin-top: 56px;
+          text-align: left;
+        }
+        .services-page-intro p {
+          margin-left: 0;
+        }
+        .service-catalog-grid {
+          grid-template-columns: 1fr;
+        }
+        .service-card.wide,
+        .translation-card {
+          grid-column: auto;
+        }
+        .service-card {
+          min-height: 270px;
+          padding: 22px;
+        }
+        .services-page-note {
+          margin-left: 24px;
+          margin-right: 24px;
+        }
       }
     </style>
   </head>
@@ -123,7 +215,16 @@
             <img src="assets/logo.png" alt="Jasa Apostille" />
             <span>Jasa Apostille</span>
           </a>
-          <button class="menu-btn" id="menuBtn" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Buka menu"
+            aria-expanded="false"
+            aria-controls="menu"
+          >
+            &#9776;
+          </button>
           <div class="pill" id="menu">
             <a href="index.html#top">Beranda</a>
             <a class="active" href="layanan.html">Layanan</a>
@@ -135,7 +236,10 @@
         <div class="services-page-intro">
           <span class="label">Layanan kami</span>
           <h1>Dokumen siap dipakai di mana pun.</h1>
-          <p>Kami membantu apostille dan terjemahan dokumen dengan proses yang jelas, rapi, dan sesuai kebutuhan instansi tujuan Anda.</p>
+          <p>
+            Kami membantu apostille dan terjemahan dokumen dengan proses yang
+            jelas, rapi, dan sesuai kebutuhan instansi tujuan Anda.
+          </p>
         </div>
       </header>
 
@@ -147,49 +251,133 @@
               <div>
                 <div class="service-number">01</div>
                 <h2>Legalisasi Apostille</h2>
-                <p>Pengesahan dokumen publik Indonesia agar diakui di negara anggota Konvensi Apostille, seperti ijazah, akta kelahiran, akta nikah, dan akta notaris.</p>
+                <p>
+                  Pengesahan dokumen publik Indonesia agar diakui di negara
+                  anggota Konvensi Apostille. Melayani berbagai kategori
+                  dokumen, termasuk Dokumen Pendidikan (ijazah dan transkrip
+                  nilai), Dokumen Kependudukan (akta kelahiran, akta nikah, dan
+                  kartu keluarga), serta Dokumen Hukum & Bisnis (akta notaris,
+                  surat kuasa, dan dokumen perusahaan).
+                </p>
               </div>
-              <a class="btn btn-light service-link" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Legalisasi%20Apostille.%20Mohon%20informasi%20lebih%20lanjut." rel="noopener">Tanya layanan ini &#8599;</a>
+              <a
+                class="btn btn-light service-link"
+                href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Legalisasi%20Apostille.%20Mohon%20informasi%20lebih%20lanjut."
+                rel="noopener"
+                >Tanya layanan ini &#8599;</a
+              >
+            </article>
+            <article class="service-card translation-card">
+              <div>
+                <div class="service-number">02</div>
+                <h2>Terjemah Tersumpah</h2>
+                <p>Pilih pasangan bahasa untuk terjemahan tersumpah dokumen Anda.</p>
+                <div class="language-grid" aria-label="Pilihan bahasa terjemah tersumpah">
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Inggris." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇬🇧</span><span>Indonesia ↔ Inggris</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Belanda." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇳🇱</span><span>Indonesia ↔ Belanda</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Mandarin." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇨🇳</span><span>Indonesia ↔ Mandarin</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Jerman." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇩🇪</span><span>Indonesia ↔ Jerman</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Arab." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇸🇦</span><span>Indonesia ↔ Arab</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Korea." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇰🇷</span><span>Indonesia ↔ Korea</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Jepang." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇯🇵</span><span>Indonesia ↔ Jepang</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Rusia." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇷🇺</span><span>Indonesia ↔ Rusia</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Spanyol." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇪🇸</span><span>Indonesia ↔ Spanyol</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Turki." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇹🇷</span><span>Indonesia ↔ Turki</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Prancis." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇫🇷</span><span>Indonesia ↔ Prancis</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Portugis." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇵🇹</span><span>Indonesia ↔ Portugis</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Thailand." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇹🇭</span><span>Indonesia ↔ Thailand</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Italia." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇮🇹</span><span>Indonesia ↔ Italia</span></a>
+                  <a class="language-card" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20tertarik%20Terjemah%20Tersumpah%20Indonesia%20%E2%86%94%20Vietnam." rel="noopener"><span class="language-flags" aria-hidden="true">🇮🇩🇻🇳</span><span>Indonesia ↔ Vietnam</span></a>
+                </div>
+              </div>
             </article>
             <article class="service-card wide">
               <div>
-                <div class="service-number">02</div>
+                <div class="service-number">03</div>
                 <h2>Layanan Express 24 Jam</h2>
-                <p>Butuh cepat? Kirim dokumen Anda untuk mendapat estimasi waktu dan biaya. Banyak terjemahan dapat selesai dalam 24 jam; waktu apostille mengikuti proses instansi.</p>
+                <p>
+                  Butuh cepat? Kirim dokumen Anda untuk mendapat estimasi waktu
+                  dan biaya. Banyak terjemahan dapat selesai dalam 24 jam; waktu
+                  apostille mengikuti proses instansi.
+                </p>
               </div>
-              <a class="btn btn-blue service-link" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20membutuhkan%20layanan%20Express%2024%20Jam.%20Mohon%20cek%20estimasi%20waktu%20dan%20biayanya." rel="noopener">Cek ketersediaan &#8599;</a>
+              <a
+                class="btn btn-blue service-link"
+                href="https://wa.me/6281222990164?text=Halo%2C%20saya%20membutuhkan%20layanan%20Express%2024%20Jam.%20Mohon%20cek%20estimasi%20waktu%20dan%20biayanya."
+                rel="noopener"
+                >Cek ketersediaan &#8599;</a
+              >
             </article>
           </div>
         </section>
 
-        <aside class="services-page-note"><strong>Belum yakin memilih layanan?</strong> Kirim foto atau scan dokumen, negara tujuan, dan kebutuhan Anda melalui WhatsApp. Kami bantu menentukan layanan yang sesuai sebelum Anda menyetujui pesanan.</aside>
+        <aside class="services-page-note">
+          <strong>Belum yakin memilih layanan?</strong> Kirim foto atau scan
+          dokumen, negara tujuan, dan kebutuhan Anda melalui WhatsApp. Kami
+          bantu menentukan layanan yang sesuai sebelum Anda menyetujui pesanan.
+        </aside>
       </main>
 
       <footer>
         <div class="cta">
-          <h2>Dokumen resmi, proses cepat. Mulai konsultasi gratis sekarang.</h2>
-          <a class="btn btn-light" href="https://wa.me/6281222990164?text=Halo%2C%20saya%20ingin%20konsultasi%20layanan%20dokumen.%20Terima%20kasih." rel="noopener">Chat WhatsApp</a>
+          <h2>
+            Dokumen resmi, proses cepat. Mulai konsultasi gratis sekarang.
+          </h2>
+          <a
+            class="btn btn-light"
+            href="https://wa.me/6281222990164?text=Halo%2C%20saya%20ingin%20konsultasi%20layanan%20dokumen.%20Terima%20kasih."
+            rel="noopener"
+            >Chat WhatsApp</a
+          >
         </div>
         <div class="foot-grid">
-          <div><span class="brand">Jasa Apostille</span>Jasa apostille, terjemah resmi, dan terjemah tersumpah. Melayani Serang dan seluruh Indonesia.</div>
-          <ul><li><a href="index.html#top">Beranda</a></li><li><a href="layanan.html">Layanan</a></li><li><a href="index.html#proses">Cara Kerja</a></li><li><a href="index.html#faq">FAQ</a></li></ul>
-          <ul><li><a href="index.html#alasan">Mengapa kami</a></li><li><a href="index.html#ulasan">Testimoni</a></li><li><a href="index.html#kontak">Kontak</a></li></ul>
-          <address class="contact">WhatsApp: <a href="https://wa.me/6281222990164">0812-2299-0164</a><br />Email: <a href="mailto:jasaapostille.tuba@gmail.com">jasaapostille.tuba@gmail.com</a><br />Laban, Kec. Tirtayasa, Kabupaten Serang, Banten 42193<br />Jam layanan: Setiap hari, 24 jam</address>
+          <div>
+            <span class="brand">Jasa Apostille</span>Jasa apostille, terjemah
+            resmi, dan terjemah tersumpah. Melayani Serang dan seluruh
+            Indonesia.
+          </div>
+          <ul>
+            <li><a href="index.html#top">Beranda</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="index.html#proses">Cara Kerja</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+          <ul>
+            <li><a href="index.html#alasan">Mengapa kami</a></li>
+            <li><a href="index.html#ulasan">Testimoni</a></li>
+            <li><a href="index.html#kontak">Kontak</a></li>
+          </ul>
+          <address class="contact">
+            WhatsApp: <a href="https://wa.me/6281222990164">0812-2299-0164</a
+            ><br />Email:
+            <a href="mailto:jasaapostille.tuba@gmail.com"
+              >jasaapostille.tuba@gmail.com</a
+            ><br />Laban, Kec. Tirtayasa, Kabupaten Serang, Banten 42193<br />Jam
+            layanan: Setiap hari, 24 jam
+          </address>
         </div>
-        <div class="copy">&copy; <span id="copyrightYear">2026</span> Jasa Apostille. Hak cipta dilindungi.</div>
+        <div class="copy">
+          &copy; <span id="copyrightYear">2026</span> Jasa Apostille. Hak cipta
+          dilindungi.
+        </div>
       </footer>
     </div>
     <script>
-      const menuBtn = document.getElementById('menuBtn');
-      const menu = document.getElementById('menu');
-      menuBtn.addEventListener('click', () => {
-        const open = menu.classList.toggle('open');
-        menuBtn.setAttribute('aria-expanded', String(open));
-        menuBtn.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
-        menuBtn.innerHTML = open ? '&#10005;' : '&#9776;';
+      const menuBtn = document.getElementById("menuBtn");
+      const menu = document.getElementById("menu");
+      menuBtn.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", String(open));
+        menuBtn.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+        menuBtn.innerHTML = open ? "&#10005;" : "&#9776;";
       });
-      menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('open')));
-      document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+      menu
+        .querySelectorAll("a")
+        .forEach((link) =>
+          link.addEventListener("click", () => menu.classList.remove("open")),
+        );
+      document.getElementById("copyrightYear").textContent =
+        new Date().getFullYear();
     </script>
   </body>
 </html>
