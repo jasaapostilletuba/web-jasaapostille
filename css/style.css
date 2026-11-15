@@ -137,7 +137,7 @@ img{max-width:100%;display:block}
 .quote[hidden]{display:none}
 .quote p{margin:0;font-size:18px;line-height:1.5}
 .who{display:flex;align-items:center;gap:10px;font-size:13px}
-.who i{width:32px;height:32px;border-radius:50%;background:#c9d6f5}
+.who img{display:block;width:32px;height:32px;min-width:32px;min-height:32px;aspect-ratio:1;border-radius:50%;overflow:hidden;object-fit:cover;object-position:center;flex:0 0 32px}
 .who small{display:block;color:var(--muted);font-size:11px}
 .arrows{display:flex;gap:12px;justify-content:center;margin-top:22px}
 .arrows button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--blue);background:#fff;color:var(--blue);transition:transform .18s ease,background .18s ease,color .18s ease}
